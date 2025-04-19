@@ -1,0 +1,19 @@
+from src.montecarlo_game.simulator import GameSimulator
+from src.montecarlo_game.payoff_matrix import get_dilema_prisioneiro_matrix
+from src.montecarlo_game.monte_carlo import monte_carlo_simulation
+import pandas as pd
+
+def main():
+    print("Iniciando simulação Monte Carlo para o Dilema do Prisioneiro...")
+    
+    payoff_matrix = get_dilema_prisioneiro_matrix()
+    simulator = GameSimulator(payoff_matrix)
+
+    stats = monte_carlo_simulation(simulator, iterations=10000, strategy_type="random")
+    df = pd.DataFrame(stats)
+    df.to_csv("data/results.csv", index=False)
+
+    print("Simulação concluída. Resultados salvos em data/results.csv.")
+
+if __name__ == "__main__":
+    main()

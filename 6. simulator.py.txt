@@ -1,0 +1,16 @@
+import numpy as np
+
+class GameSimulator:
+    def __init__(self, payoff_matrix):
+        self.payoff_matrix = payoff_matrix
+
+    def play(self, strategy_a, strategy_b):
+        action_a = strategy_a()
+        action_b = strategy_b()
+        payoff = self.payoff_matrix[action_a][action_b]
+        return {
+            "player_a_action": action_a,
+            "player_b_action": action_b,
+            "payoff_a": payoff[0],
+            "payoff_b": payoff[1]
+        }

@@ -1,0 +1,16 @@
+# Teoria dos Jogos — 
+
+Este projeto utiliza simulações de Monte Carlo para resolver e analisar jogos clássicos da Teoria dos Jogos. Ele permite:
+- Simular jogadores com estratégias randômicas ou definidas
+- Calcular médias de payoff (recompensas)
+- Analisar comportamento ótimo emergente
+
+## Funcionalidades
+- Jogos suportados:  Matching Pennies, Pedra-Papel-Tesoura
+- Estratégias: aleatória, fixa, exploratória (epsilon-greedy)
+- Resultados exportados para CSV
+- Gráficos de convergência
+
+## Execução
+```bash
+python main.py

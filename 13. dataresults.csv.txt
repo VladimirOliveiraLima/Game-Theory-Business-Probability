@@ -1,0 +1,5 @@
+player_a_action,player_b_action,payoff_a,payoff_b
+C,D,0,5
+D,C,5,0
+D,D,1,1
+...
