@@ -1,4 +1,4 @@
-def get_dilema_prisioneiro_matrix():
+def get_get_estratégia_juridica_matrix():
     """
    
     A estrutura é:
