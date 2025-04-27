@@ -1,12 +1,12 @@
 from src.montecarlo_game.simulator import GameSimulator
-from src.montecarlo_game.payoff_matrix import get_dilema_prisioneiro_matrix
+from src.montecarlo_game.payoff_matrix import get_estratégia_juridica_matrix
 from src.montecarlo_game.monte_carlo import monte_carlo_simulation
 import pandas as pd
 
 def main():
-    print("Iniciando simulação Monte Carlo para o Dilema do Prisioneiro...")
+    print("Iniciando simulação...")
     
-    payoff_matrix = get_dilema_prisioneiro_matrix()
+    payoff_matrix = get_estratégia_juridica_matrix()
     simulator = GameSimulator(payoff_matrix)
 
     stats = monte_carlo_simulation(simulator, iterations=10000, strategy_type="random")
